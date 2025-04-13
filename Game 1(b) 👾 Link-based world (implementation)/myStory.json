@@ -1,0 +1,72 @@
+{
+    "Title": "Dead Air",
+    "Credits": "Created by Michael Carrillo (mcarri34@ucsc.edu).",
+    "InitialLocation": "Discarded Apartment",
+    "Locations": {
+        "Radio Tower Rooftop": {
+            "Body": "You find yourself next to an old radio dish. It looks like it can still turn.",
+            "Interactive": "RadioDish",
+            "Choices": [
+                { "Text": "Climb down to the Discarded Apartment.", "Target": "Discarded Apartment" }
+            ]
+        },
+        "Discarded Apartment": {
+            "Body": "Dusty floors and broken furniture. A stairwell leads up, and a hallway south. A Market can be seen, to dark to tell what's inside.",
+            "Choices": [
+                { "Text": "Go up to the Radio Tower Rooftop.", "Target": "Radio Tower Rooftop" },
+                { "Text": "Walk south to the Flooded Alley.", "Target": "Flooded Alley" },
+                { "Text": "Try to enter the Abandoned Market (Use Flashlight).", "Target": "Abandoned Market", "KeyRequired": "Flashlight" }
+            ]
+        },
+        "Flooded Alley": {
+            "Body": "Shallow water floods the path. There's a tunnel ahead and a way back.",
+            "Choices": [
+                { "Text": "Go east to the Sewage Tunnel.", "Target": "Sewage Tunnel" },
+                { "Text": "Go west to the Discarded Apartment.", "Target": "Discarded Apartment" }
+            ]
+        },
+        "Sewage Tunnel": {
+            "Body": "Dark, damp, and echoing. You hope nothing lives here. Something metallic glints in the muck.",
+            "Choices": [
+                { "Text": "Pick up the flashlight.", "Target": "Sewage Tunnel", "ItemGained": "Flashlight", "OnlyIfNotInInventory": true },
+                { "Text": "Return to the Flooded Alley.", "Target": "Flooded Alley" }
+            ]
+        },
+        "Abandoned Market": {
+            "Body": "Old cans and broken displays. A crate sits near the back.",
+            "Choices": [
+                { "Text": "Pick up the crate to reach higher places.", "Target": "Abandoned Market", "ItemGained": "Crate", "OnlyIfNotInInventory": true },
+                { "Text": "Use crate to climb to Roof Garden.", "Target": "Roof Garden", "KeyRequired": "Crate" },
+                { "Text": "Go down to the Boat Launch Site.", "Target": "Boat Launch Site" }
+            ]
+        },
+        "Roof Garden": {
+            "Body": "Overgrown greenery and rusted tools. A crowbar is jammed into an old planter.",
+            "Choices": [
+                { "Text": "Take the crowbar.", "Target": "Roof Garden", "ItemGained": "Crowbar", "OnlyIfNotInInventory": true },
+                { "Text": "Go back down to the Abandoned Market.", "Target": "Abandoned Market" }
+            ]
+        },
+        "Boat Launch Site": {
+            "Body": "Creaking docks and stagnant water. A road curves away.",
+            "Choices": [
+                { "Text": "Walk east to the Overpass Ruins.", "Target": "Overpass Ruins" },
+                { "Text": "Return to the Abandoned Market.", "Target": "Abandoned Market" }
+            ]
+        },
+        "Overpass Ruins": {
+            "Body": "Collapsed roads and twisted metal frame the skyline. A massive iron door blocks the library below.",
+            "Choices": [
+                { "Text": "Use crowbar to open the library door.", "Target": "Sunken Library", "KeyRequired": "Crowbar" },
+                { "Text": "Return to the Boat Launch Site.", "Target": "Boat Launch Site" }
+            ]
+        },
+        "Sunken Library": {
+            "Body": "You pry open the heavy door and step into the Sunken Library. Books float in ankle-deep water. On a pedestal, an ancient text glows faintly.",
+            "Choices": [
+                { "Text": "Take the ancient text and end your journey.", "Target": null }
+            ]
+        }
+    }
+}
+
